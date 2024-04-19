@@ -1,7 +1,7 @@
 return {
     "williamboman/mason.nvim",
     opts = {
-        ensure_installed = {"stylua","shfmt","shellcheck","lua-language-server","bash-language-server"},
+        ensure_installed = {"stylua","shfmt","shellcheck","lua-language-server","bash-language-server","codelldb"},
         ui = {
             check_outdated_packages_on_open = false,
         },

@@ -8,6 +8,7 @@ return {
         }
     },
     config = function(_, opts)
+        require 'nvim-treesitter.install'.compilers = { "cl", "clang", "gcc" }
         if type(opts.ensure_installed) == "table" then
           ---@type table<string, boolean>
           local added = {}
