@@ -9,6 +9,7 @@ return {
     },
     config = function(_, opts)
         require 'nvim-treesitter.install'.compilers = { "cl", "clang", "gcc" }
+        require("nvim-treesitter.install").prefer_git = true
         if type(opts.ensure_installed) == "table" then
           ---@type table<string, boolean>
           local added = {}
@@ -23,6 +24,7 @@ return {
         for _, config in pairs(require("nvim-treesitter.parsers").get_parser_configs()) do
             config.install_info.url = config.install_info.url:gsub("https://github.com/", "https://gh.idayer.com/https://github.com/")
         end
+        
         require("nvim-treesitter.configs").setup(opts)
       end,
     },
