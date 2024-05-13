@@ -21,7 +21,7 @@ return {
           end, opts.ensure_installed)
         end
         for _, config in pairs(require("nvim-treesitter.parsers").get_parser_configs()) do
-            config.install_info.url = config.install_info.url:gsub("https://github.com/", "https://gh-proxy.com/https://github.com/")
+            config.install_info.url = config.install_info.url:gsub("https://github.com/", "https://gh.idayer.com/https://github.com/")
         end
         require("nvim-treesitter.configs").setup(opts)
       end,
